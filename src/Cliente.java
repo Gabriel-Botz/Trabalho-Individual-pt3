@@ -4,8 +4,8 @@ public class Cliente {
     private String cpf;
 
     public Cliente(String cpf, String nome) {
-        this.cpf = cpf;
         this.nome = nome;
+        this.cpf = cpf;
     }
 
     public String getCpf() {
