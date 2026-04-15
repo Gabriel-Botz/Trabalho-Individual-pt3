@@ -20,10 +20,12 @@ public class Pedido {
 
         valorTotal = 0;
 
+        // Soma dos itens
         for (ItemPedido item : listaItens) {
             valorTotal += item.calcularTotal();
         }
 
+        // Regra do frete
         if (valorTotal > 250.00) {
             valorFrete = 0.0;
         } else {
@@ -35,11 +37,11 @@ public class Pedido {
         imprimirRecibo();
     }
 
-    public void imprimirRecibo() {
+    private void imprimirRecibo() {
         System.out.println("===== RECIBO =====");
         System.out.println("Cliente: " + cliente.getNome());
-        System.out.println("\nItens:");
 
+        System.out.println("\nItens:");
         for (ItemPedido item : listaItens) {
             System.out.println(item);
         }

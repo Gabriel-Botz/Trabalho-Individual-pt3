@@ -38,8 +38,8 @@ public class ItemPedido {
     public String toString() {
         return "Produto: " + nomeProduto +
                 " | Qtd: " + quantidade +
-                " | Unit: " + precoUnitario +
-                " | Total: " + calcularTotal();
+                " | Unit: " + String.format("%.2f", precoUnitario) +
+                " | Total: " + String.format("%.2f", calcularTotal());
     }
 }
 
